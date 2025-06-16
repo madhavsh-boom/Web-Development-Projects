@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <style>
+        body {
+          font-family: sans-serif;
+          text-align: center;
+          padding: 50px;
+          background: #f0f8ff;
+        }
+    
+        #quote {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+    
+        #author {
+          font-size: 18px;
+          color: #555;
+        }
+    
+        button {
+          padding: 10px 20px;
+          font-size: 16px;
+          background: #007bff;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          background: #0056b3;
+        }
+    
+        #loader {
+          display: none;
+          font-style: italic;
+          color: #888;
+        }
+
+
+        
+      </style>
+</head>
+<body>
+    <h2 id="quote">Loading Quote...</h2>
+    <p id="author"></p>
+    <p id="loader">Fetching a new Quote...</p>
+    <img id="image" alt="">
+    <button onclick="showQuote()">New Quote</button>
+    <button onclick="copyQuote()">Copy Quote</button>
+    <!-- <button onclick="tweetQuote()">Tweet</button> -->
+    <button onclick="saveFavorite()">❤️ Save to Favorites</button>
+    <h3>Saved Quotes:</h3>
+    <ul id="favoritesList"></ul>
+    <button onclick="showFavorites()">Show Favorites</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      div {
+        background: aqua;
+        width: 20rem;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        font-size: 1.5rem;
+      }
+      button {
+        display: block;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>Counter:</h2>
+      <h2 id="value">1</h2>
+    </div>
+    <button onclick="addCounter()">Add Value</button>
+    <button onclick="removeCounter()">Remove Value</button>
+
+    <script>
+      function addCounter() {
+        let val = parseInt(document.getElementById("value").innerText);
+        val += 1;
+        document.getElementById("value").innerText = val;
+      }
+
+      function removeCounter() {
+        let val = parseInt(document.getElementById("value").innerText);
+        val -= 1;
+        document.getElementById("value").innerText = val;
+      }
+    </script>
+  </body>
+</html>
